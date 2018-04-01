@@ -7,7 +7,9 @@ public class V2B_CalcVoltage : MonoBehaviour {
 
     private InputField eInput1, eInput2;
     private InputField iInput1, iInput2;
-    public void calcFunc ()
+    private InputField rInput2;
+
+    public void getEIvalues ()
     {
         eInput1= GameObject.Find("InputField_E1").GetComponent<InputField>();
         eInput2 = GameObject.Find("InputField_E2").GetComponent<InputField>();
@@ -25,6 +27,24 @@ public class V2B_CalcVoltage : MonoBehaviour {
 
         Debug.Log("i- input get parsed");
 
+       
+        rInput2 = GameObject.Find("InputField_R2").GetComponent<InputField>();
+        double R2 = double.Parse(rInput2.text);
+
+        Debug.Log("r- input get parsed");
+
+
 
     }
+
+   /* public void getRvalues()
+    {
+        // rInput1 = GameObject.Find("InputField_R1").GetComponent<InputField>();
+        //double R1 = double.Parse(rInput1.text);
+
+        double R2 = double.Parse(rInput2.text);
+
+        Debug.Log("r- input get parsed");
+    }
+    */
 }
